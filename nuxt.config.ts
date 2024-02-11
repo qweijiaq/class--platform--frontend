@@ -2,9 +2,6 @@ import Components from "unplugin-vue-components/vite";
 import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
 
 export default defineNuxtConfig({
-  experimental: {
-    reactivityTransform: true,
-  },
   vite: {
     plugins: [
       Components({
@@ -12,7 +9,7 @@ export default defineNuxtConfig({
       }),
     ],
   },
-  modules: ["@unocss/nuxt"],
+  modules: ["@unocss/nuxt", "@pinia/nuxt"],
   unocss: {
     uno: true, //激活 unocss
     attributify: true, //激活属性化模式
