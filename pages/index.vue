@@ -7,6 +7,10 @@
 </template>
 
 <script setup lang="ts">
+import { test } from "../api/test";
+const data = await test();
+console.log(data);
+
 const __temp = useUser(),
   count = toRef(__temp, "count"),
   add = __temp.add,
